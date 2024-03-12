@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms elements</title>
+</head>
+
+<body>
+    <h1>Forms demo</h1>
+    <form action="/nothing">
+        <!-- The default input type is text -->
+        <!-- The placeholder is used to show text when user has not types anything -->
+
+        <!-- labels are used to give caption for a item -->
+        <!-- labels have a for attribute which is used to connect with the input element -->
+        <!-- the for takes the value of the id of the input element to associate it to -->
+        <!-- Once associated the label once clicked focuses on the input element -->
+
+        <!-- The name attr is used to send data to server in a particular format -->
+
+        <p>
+            <label for="username">Enter a username</label>
+            <input type="text" placeholder="username" id="username" name="username">
+            <!-- If username is entered as tanishq the we can see the url as: file:///D:/nothing?username=Legend15122005 -->
+            <!-- similarly if name is added to all inputs then the entries are seprated by a & -->
+        </p>
+        <p>
+            <label for="password">Enter a password</label>
+            <input type="password" placeholder="password" id="password">
+        </p>
+        <p>
+            <label for="color">Enter a color</label>
+            <input type="color" id="color">
+        </p>
+        <p>
+            <label for="number">Enter a number</label>
+            <input type="number" placeholder="enter a number" id="number">
+        </p>
+        <!-- Another way of using labels is nesting input inside a label -->
+        <!-- This directly connects label and the input without using for and id -->
+        <p>
+            <label>
+                Enter a color V2
+                <input type="color">
+            </label>
+        </p>
+        <!-- The default behaviour of a button in a form is to sumbit -->
+        <!-- Explicitly it can be mentioned by using type attribute -->
+        <button>Sumbit</button>
+        <!-- To make it behave like a normal button use type attribute -->
+        <button type="button">Do not sumbit behave like a normal button</button>
+        <!-- input can also be used to make a button -->
+        <!-- Its default value will be sumbit and can be changed by value attr -->
+        <input type="submit" value="sumbit generated from input">
+    </form>
+</body>
+
+</html>
