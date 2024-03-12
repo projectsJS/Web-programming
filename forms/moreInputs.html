@@ -10,10 +10,50 @@
 <body>
     <form action="/nothing">
         <p>
-            <input type="radio" name="" id="">
-            <input type="radio" name="" id="">
-            <input type="radio" name="" id="">
+            <!-- Note: if the radio button has different or no name then more than one can be selected -->
+            <!-- If the radio button are given the same names then browser undestands that they mean the same thing -->
+            <!-- Hence only one of them is allowed to be selected -->
+
+            <!-- nothing?size=on -->
+            <!-- Above is what is printed to the url note for all buttons it gives size=on -->
+            <!-- This dosen't tell us which one is selected -->
+            <!-- So we use value attribute to send the value to the server -->
+
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S:</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M:</label>
+            <input type="radio" name="size" id="m" value="m">
         </p>
+        <p>
+            <label for="meal">Select a meal:</label>
+            <!-- The name is used to define the way data will be sent to server -->
+            <!-- For us it is nothing?meal=veg -->
+            <!-- The thing in the value attr is sent to the server not the text -->
+            <select name="meal" id="meal">
+                <option value="">--Please select a option--</option>
+                <option value="chicken">Chicken</option>
+                <option value="veg">Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <p>
+            <!-- min is used to give minimum value similar for max-->
+            <!-- step gives the increment -->
+            <!-- value is used to give initial value -->
+
+            <label for="range">Select the amount of cheese:</label>
+            <input type="range" name="cheese_level" id="range" min="1" max="100" step="2" value="23">
+        </p>
+        <p>
+            <label for="specialReq">Any special requests:</label>
+            <br>
+            <textarea name="requests" id="specialReq" cols="30" rows="10" placeholder="Enter something here">
+
+            </textarea>
+        </p>
+        <button>Sumbit</button>
     </form>
 </body>
 
